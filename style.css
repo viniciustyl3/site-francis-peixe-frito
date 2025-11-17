@@ -511,3 +511,18 @@ footer .social-link a:hover {
     color: #555;
     margin-bottom: 0;
 }
+/* ======================================= */
+/* Correção: Espaçamento do Título         */
+/* ======================================= */
+
+/* Alvos: a seção que contém o "Bem-vindo" */
+.hero-banner {
+    /* Centraliza este bloco e limita a largura, 
+       igual ao cartão branco que vem abaixo */
+    max-width: 900px;
+    margin: 30px auto 0 auto; /* Centraliza na página e dá 30px de espaço em cima */
+    
+    /* Adiciona o padding que faltava */
+    padding-left: 25px;
+    padding-right: 25px;
+}
