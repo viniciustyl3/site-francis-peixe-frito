@@ -1,0 +1,432 @@
+/* Configurações Globais */
+body {
+    font-family: "Lato", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+
+    /* TESTE DE QUEBRA - ADICIONE ISTO */
+}
+
+/* NOVO: Aplica a fonte de Título */
+/* ESTA REGRA COMEÇA AQUI FORA */
+h1, h2, h3, h4, h5, h6, .logo h1 {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #A0522D; /* Marrom-avermelhado */
+    color: white;
+    padding: 15px 30px; /* Padding ajustado */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    /* NOVO: Estilos da Logo */
+.logo {
+    display: flex; /* Coloca a logo e o texto lado-a-lado */
+    align-items: center; /* Centraliza eles verticalmente */
+    gap: 15px; /* Cria um espaço entre a logo e o texto */
+}
+
+#logo-img {
+    height: 50px; /* Define uma altura fixa para a logo */
+    width: 50px;  /* Define uma largura fixa */
+    
+    /* Isso força a imagem (que é quadrada) a ficar redonda */
+    border-radius: 50%; 
+    
+    /* Um pequeno detalhe para destacar */
+    border: 2px solid white; 
+}
+    
+    /* NOVO: Flexbox para alinhar logo e menu */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.8em; /* Tamanho levemente reduzido para caber */
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #A0522D; 
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Seção do Cardápio */
+.container-cardapio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.prato {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fafafa;
+    transition: box-shadow 0.3s ease;
+}
+.prato:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.prato h3 {
+    margin-top: 0;
+    color: #333;
+}
+.prato .preco {
+    font-weight: bold;
+    color: #E67E22; /* Laranja escuro */
+    font-size: 1.1em;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Seção da Localização e Contato */
+#localizacao p, #contato p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+.mapa-responsivo {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    border-radius: 8px;
+}
+.mapa-responsivo iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
+/* ======================================= */
+/* NOVO: Estilo do Rodapé Completo         */
+/* ======================================= */
+
+footer {
+    text-align: left; /* Alinhamento geral à esquerda */
+    padding: 40px 30px 10px 30px; /* Mais padding */
+    background-color: #333; /* Um cinza mais escuro */
+    color: #ccc; /* Cor do texto mais suave */
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
+    justify-content: space-between; /* Espaço entre as colunas */
+    max-width: 1000px; /* Limita a largura */
+    margin: 0 auto; /* Centraliza */
+    gap: 30px; /* Espaço entre colunas */
+}
+
+.footer-column {
+    flex: 1; /* Faz as colunas crescerem igualmente */
+    min-width: 220px; /* Largura mínima antes de quebrar */
+}
+
+.footer-column h4 {
+    color: white;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+footer .social-link {
+    margin-top: 15px;
+}
+
+footer .social-link a {
+    color: #E67E22; /* Laranja da marca */
+    font-weight: bold;
+    text-decoration: none;
+}
+footer .social-link a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444; /* Linha separadora */
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Esconde o botão hambúrguer em telas grandes */
+#btn-mobile {
+    display: none;
+    font-size: 1.5em; /* Tamanho do ícone ☰ */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo do menu (lista) */
+#menu {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaço entre os links */
+    margin: 0;
+    padding: 0;
+}
+#menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+#menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ---- Media Query: A Mágica do Responsivo ---- */
+/* Quando a tela for menor que 700px... */
+@media (max-width: 700px) {
+    /* 1. Mostra o botão hambúrguer */
+    #btn-mobile {
+        display: block;
+    }
+
+    /* 2. Esconde o menu de navegação normal */
+    #menu {
+        display: none; /* Escondido por padrão */
+        position: absolute;
+        width: 100%;
+        top: 68px; /* Altura do header */
+        right: 0px;
+        background-color: #A0522D;
+        flex-direction: column; /* Links um embaixo do outro */
+        align-items: center;
+        z-index: 1000;
+    }
+
+    /* 3. Regra que o JavaScript vai ativar */
+    /* Quando o <nav> tiver a classe .active, o menu aparece */
+    #nav.active #menu {
+        display: flex;
+    }
+
+    #menu li {
+        width: 100%;
+        text-align: center;
+    }
+    #menu li a {
+        padding: 15px;
+        display: block; /* Ocupa a linha toda */
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
+/* ======================================= */
+/* NOVO: Estilos da Seção "Sobre"          */
+/* ======================================= */
+
+#sobre p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+#sobre h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.especialidades {
+    display: flex;
+    flex-wrap: wrap; /* Para quebrar a linha em telas pequenas */
+    gap: 15px; /* Espaço entre as pílulas */
+    margin-top: 15px;
+}
+
+.especialidades span {
+    background-color: #E67E22; /* Laranja do preço */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px; /* Formato de "pílula" */
+    font-weight: bold;
+    font-size: 1em;
+}
+/* ============================================== */
+/* NOVO: Estilos da Página "Sobre" (index.html)   */
+/* ============================================== */
+
+/* Estiliza o parágrafo da história */
+.nossa-historia {
+    margin-top: 25px;
+    background-color: #fafafa; /* Um fundo bem suave */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.nossa-historia p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555; /* Um cinza um pouco mais escuro */
+    margin: 0;
+}
+
+/* Container dos botões de ação */
+.cta-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Deixa quebrar a linha no celular */
+}
+
+/* Estilo base dos botões de ação */
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px); /* Efeito "levantar" */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Botão principal (Cor Laranja) */
+.cta-button {
+    background-color: #E67E22; /* Laranja */
+    color: white;
+}
+
+/* Botão secundário (Cor Marrom) */
+.cta-button.cta-secondary {
+    background-color: #A0522D; /* Marrom */
+    color: white;
+}
+
+/* Linha separadora */
+.section-divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 40px 0;
+}
+
+/* Ajustes finos de texto */
+#sobre h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.horario-texto {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+/* ======================================= */
+/* NOVO: Estilos da Página Cardápio        */
+/* ======================================= */
+
+/* Descrição abaixo do título da seção (Ex: "Todos acompanham...") */
+.descricao-secao {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #555;
+    background-color: #fafafa;
+    border-left: 4px solid #E67E22; /* Laranja */
+    padding: 10px 15px;
+    margin-bottom: 25px;
+}
+
+/* Subtítulos dentro do cardápio (Ex: "Sucos", "Cervejas") */
+#cardapio h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Remove a descrição (tag <p>) do item do prato, se não houver */
+.prato p {
+    display: none; /* Esconde o parágrafo de descrição que não estamos usando */
+}
+
+/* ======================================= */
+/* NOVO: Estilo do Instagram no Rodapé     */
+/* ======================================= */
+footer .social-link {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+footer .social-link a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer .social-link a:hover {
+    text-decoration: underline;
+}
+/* ======================================= */
+/* NOVO: Botão Flutuante do WhatsApp       */
+/* ======================================= */
+.whatsapp-float {
+    position: fixed; /* Fica fixo na tela */
+    bottom: 25px; /* 25px do fundo */
+    right: 25px; /* 25px da direita */
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+    color: white; /* Cor do ícone */
+    width: 60px; /* Tamanho do círculo */
+    height: 60px; /* Tamanho do círculo */
+    border-radius: 50%; /* Faz ser um círculo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra */
+    
+    /* Para centralizar o ícone SVG */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    z-index: 1000; /* Garante que fique por cima de tudo */
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
