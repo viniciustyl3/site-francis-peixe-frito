@@ -23,6 +23,45 @@ header {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
+    /* ======================================= */
+/* NOVO: Banner de Boas-Vindas (index.html)*/
+/* ======================================= */
+
+.hero-banner {
+    /* Usando o laranja do botão de ação */
+    background-color: #E67E22; 
+    color: white; /* Texto branco para contrastar */
+    padding: 50px 30px; /* Mais espaço vertical */
+    text-align: center;
+    
+    /* Um pequeno "truque" para alinhar com o fundo do cabeçalho */
+    margin-top: -1px; 
+}
+
+.hero-banner h2 {
+    font-size: 2.8em; /* Fonte bem grande */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700; /* Mais "grosso" */
+}
+
+.hero-banner p {
+    font-size: 1.3em;
+    margin: 0;
+    opacity: 0.95; /* Levemente transparente */
+    font-weight: 400; /* Mais leve */
+}
+
+/* Ajuste no <main> para ele "encostar" no banner */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
     /* NOVO: Estilos da Logo */
 .logo {
     display: flex; /* Coloca a logo e o texto lado-a-lado */
